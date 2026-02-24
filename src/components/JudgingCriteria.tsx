@@ -2,25 +2,26 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 
 const criteria = [
-  { label: "UI/UX Design", pct: 20 },
-  { label: "Responsiveness", pct: 15 },
+  { label: "Effective & Creative Use of v0.dev", pct: 25 },
+  { label: "UI/UX Design & Visual Appeal", pct: 20 },
   { label: "Technical Implementation", pct: 15 },
-  { label: "Code Quality", pct: 15 },
-  { label: "Creativity & Originality", pct: 15 },
-  { label: "Performance", pct: 10 },
-  { label: "Effective Use of v0.dev", pct: 10 },
+  { label: "Project Presentation & Content Quality", pct: 10 },
+  { label: "Responsiveness (Mobile-First Design)", pct: 10 },
+  { label: "Creativity & Originality", pct: 10 },
+  { label: "Performance & Optimization", pct: 5 },
+  { label: "Code Structure & GitHub Quality", pct: 5 },
 ];
 
 const JudgingCriteria = () => (
   <section id="judging" className="py-24 px-4">
-    <div className="container mx-auto max-w-3xl">
+    <div className="container mx-auto max-w-5xl">
       <AnimatedSection>
         <h2 className="text-3xl sm:text-4xl font-display font-bold text-center mb-12 text-gradient">
           How You'll Be Evaluated
         </h2>
       </AnimatedSection>
 
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {criteria.map((c, i) => (
           <AnimatedSection key={c.label} delay={i * 0.05}>
             <motion.div
@@ -35,7 +36,7 @@ const JudgingCriteria = () => (
                 <motion.div
                   className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
                   initial={{ width: 0 }}
-                  whileInView={{ width: `${c.pct * 5}%` }}
+                  whileInView={{ width: `${c.pct * 4}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
                 />

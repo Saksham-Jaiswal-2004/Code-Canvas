@@ -18,7 +18,7 @@ const About = () => (
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 text-sm sm:text-base">
           Code Canvas is a portfolio-building competition designed to encourage students to create professional, 
-          standout portfolios. We focus on creativity, UI/UX, technical skills, and AI integration — promoting 
+          standout portfolios. We focus on creativity, UI/UX, technical skills, and AI integration - promoting 
           modern web development practices. All portfolios must be freshly built during the competition period.
         </p>
       </AnimatedSection>

@@ -22,20 +22,20 @@ const RegisterSubmit = () => (
             Deadline: <span className="text-primary font-semibold">5th March, 11:59 PM</span>
           </p>
 
-          <div className="mx-auto mb-8 max-w-xl rounded-xl border border-primary/20 bg-black/20 p-5 text-left">
+          <div className="mx-auto mb-8 w-fit rounded-xl border border-primary/20 bg-black/20 py-5 px-16 text-left">
             <p className="text-sm text-muted-foreground mb-3 font-medium">Submission requires:</p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <Link2 size={14} className="text-primary" />
-                Live portfolio link
+                Portfolio Deployed Link
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <Github size={14} className="text-primary" />
-                GitHub repository link
+                GitHub Repository Link
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <FileCheck size={14} className="text-primary" />
-                v0.dev usage proof
+                v0.dev Project Link
               </div>
             </div>
           </div>

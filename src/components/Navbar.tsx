@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
+  { label: "Timeline", href: "#timeline" },
   { label: "v0.dev", href: "#v0dev" },
   { label: "Tips", href: "#tips" },
   { label: "Prizes", href: "#prizes" },
-  { label: "Timeline", href: "#timeline" },
   { label: "FAQ", href: "#faq" },
 ];
 

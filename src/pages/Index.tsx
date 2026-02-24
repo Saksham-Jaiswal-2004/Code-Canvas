@@ -20,6 +20,8 @@ const Index = () => (
     <SectionDivider />
     <About />
     <SectionDivider />
+    <EventTimeline />
+    <SectionDivider />
     <V0DevSection />
     <SectionDivider />
     <DailyTips />
@@ -27,8 +29,6 @@ const Index = () => (
     <Prizes />
     <SectionDivider />
     <JudgingCriteria />
-    <SectionDivider />
-    <EventTimeline />
     <SectionDivider />
     <RegisterSubmit />
     <SectionDivider />

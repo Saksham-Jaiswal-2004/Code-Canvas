@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const tips = [
-  { day: 1, topic: "Color Theory", desc: "Master palettes that make your portfolio pop.", link: "" },
-  { day: 2, topic: "Typography", desc: "Choose fonts that reflect your personality.", link: "" },
-  { day: 3, topic: "Responsiveness", desc: "Ensure pixel-perfect design on every device.", link: "" },
-  { day: 4, topic: "Animations", desc: "Add subtle motion for a premium feel.", link: "" },
-  { day: 5, topic: "Project Showcase", desc: "Present your work with impact and clarity.", link: "" },
-  { day: 6, topic: "Performance", desc: "Optimize load times and core web vitals.", link: "" },
-  { day: 7, topic: "SEO Basics", desc: "Make your portfolio discoverable.", link: "" },
-  { day: 8, topic: "Code Quality", desc: "Write clean, maintainable code.", link: "" },
-  { day: 9, topic: "Final Checklist", desc: "Review everything before submission.", link: "" },
+  { day: 1, topic: "Color & Visual Identity", desc: "Use a consistent color palette and strong contrast to create a memorable first impression.", link: "" },
+  { day: 2, topic: "Typography", desc: "Choose clean, readable fonts with proper hierarchy for a professional look.", link: "" },
+  { day: 3, topic: "Responsiveness", desc: "Ensure your portfolio looks flawless on mobile, tablet, and desktop screens.", link: "" },
+  { day: 4, topic: "Animations & Micro-Interactions", desc: "Use subtle motion effects to enhance user experience without distraction.", link: "" },
+  { day: 5, topic: "Project Showcase", desc: "Highlight real impact, tech stack, and live demos instead of just listing features.", link: "" },
+  { day: 6, topic: "Performance Optimization", desc: "Optimize images and code to improve loading speed and overall performance.", link: "" },
+  { day: 7, topic: "SEO Basics", desc: "Add proper meta tags and headings to make your portfolio discoverable.", link: "" },
+  { day: 8, topic: "Personal Branding", desc: "Clearly communicate who you are, your strengths, and what makes you unique.", link: "" },
+  { day: 9, topic: "Strong Call-to-Action", desc: "Include clear buttons like Hire Me or View Resume to guide visitors effectively.", link: "" },
 ];
 
 const DailyTips = () => {

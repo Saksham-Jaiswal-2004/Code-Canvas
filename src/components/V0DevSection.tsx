@@ -5,15 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const steps = [
   "Register for the competition",
-  "Receive a confirmation email",
-  "Organizers will send v0.dev credits",
-  "Use credits during portfolio development",
-  "Submit proof in final submission form",
+  "Sign-Up on v0.dev",
+  "Go to profile section",
+  "Click on credits",
+  "Go to Billing",
+  "Redeem a usage code (INVICTUS-V0)",
+  "Enter the code",
+  "Click Redeem",
 ];
 
 const creditFaqs = [
   // { q: "What if I already have credits?", a: "You can still use the provided credits. They stack with your existing balance." },
-  { q: "What if I face issues claiming credits?", a: "Contact the organizers via email or WhatsApp. Support is available during the build phase." },
+  { q: "What if I face issues claiming credits?", a: "Contact the organisers via email or WhatsApp. Support is available during the build phase." },
 ];
 
 const V0DevSection = () => {
@@ -53,7 +56,7 @@ const V0DevSection = () => {
           </h3>
         </AnimatedSection>
 
-        <div className="space-y-3 mb-8">
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           {steps.map((step, i) => (
             <AnimatedSection key={i} delay={0.1 + i * 0.08}>
               <motion.div
