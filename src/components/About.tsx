@@ -1,5 +1,6 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import { Target, Palette, Code2, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 const features = [
   { icon: Palette, title: "Creativity", desc: "Showcase your unique design sense and personal brand." },
@@ -25,11 +26,15 @@ const About = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {features.map((f, i) => (
           <AnimatedSection key={f.title} delay={i * 0.1}>
-            <div className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group h-full">
-              <f.icon size={28} className="text-primary mb-3 group-hover:scale-110 transition-transform" />
-              <h3 className="font-display font-semibold text-foreground mb-1">{f.title}</h3>
+            <motion.div
+              whileHover={{ scale: 1.03, y: -4 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="glass rounded-xl p-6 hover:border-primary/40 hover:neon-glow transition-all duration-300 group h-full cursor-default"
+            >
+              <f.icon size={28} className="text-primary mb-3 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300" />
+              <h3 className="font-display font-semibold text-foreground mb-1 group-hover:text-gradient transition-all">{f.title}</h3>
               <p className="text-sm text-muted-foreground">{f.desc}</p>
-            </div>
+            </motion.div>
           </AnimatedSection>
         ))}
       </div>
