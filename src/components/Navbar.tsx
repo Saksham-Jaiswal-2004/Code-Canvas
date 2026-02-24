@@ -13,21 +13,33 @@ const NAV_ITEMS = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+
+      // Find active section
+      const sections = NAV_ITEMS.map((item) => item.href.slice(1));
+      let current = "";
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) current = id;
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-strong shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? "glass-strong shadow-lg shadow-primary/5" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#" className="font-display text-xl font-bold text-gradient">
+        <a href="#" className="font-display text-xl font-bold text-gradient hover:scale-105 transition-transform duration-300">
           Code Canvas
         </a>
 
@@ -37,14 +49,18 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+              className={`text-sm transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 ${
+                activeSection === item.href.slice(1)
+                  ? "text-primary after:w-full"
+                  : "text-muted-foreground hover:text-primary after:w-0 hover:after:w-full"
+              }`}
             >
               {item.label}
             </a>
           ))}
           <a
             href="#register"
-            className="text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-all duration-200"
+            className="text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
           >
             Register
           </a>
@@ -52,7 +68,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground hover:text-primary transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -61,27 +77,31 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden glass-strong border-t border-border/50 px-4 pb-4">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="block py-3 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        } glass-strong border-t border-border/50 px-4`}
+      >
+        {NAV_ITEMS.map((item) => (
           <a
-            href="#register"
+            key={item.href}
+            href={item.href}
             onClick={() => setOpen(false)}
-            className="block mt-2 text-center text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30"
+            className={`block py-3 text-sm transition-colors ${
+              activeSection === item.href.slice(1) ? "text-primary" : "text-muted-foreground hover:text-primary"
+            }`}
           >
-            Register
+            {item.label}
           </a>
-        </div>
-      )}
+        ))}
+        <a
+          href="#register"
+          onClick={() => setOpen(false)}
+          className="block mt-2 mb-4 text-center text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30"
+        >
+          Register
+        </a>
+      </div>
     </nav>
   );
 };

@@ -1,4 +1,5 @@
 import AnimatedSection from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
 
 const criteria = [
   { label: "UI/UX Design", pct: 20 },
@@ -22,18 +23,24 @@ const JudgingCriteria = () => (
       <div className="space-y-4">
         {criteria.map((c, i) => (
           <AnimatedSection key={c.label} delay={i * 0.05}>
-            <div className="glass rounded-lg p-4">
+            <motion.div
+              whileHover={{ scale: 1.02, x: 4 }}
+              className="glass rounded-lg p-4 group cursor-default hover:border-primary/20 transition-all duration-300"
+            >
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-foreground">{c.label}</span>
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{c.label}</span>
                 <span className="text-xs font-display font-bold text-primary">{c.pct}%</span>
               </div>
               <div className="h-2 rounded-full bg-muted overflow-hidden">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000"
-                  style={{ width: `${c.pct * 5}%` }}
+                <motion.div
+                  className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${c.pct * 5}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
                 />
               </div>
-            </div>
+            </motion.div>
           </AnimatedSection>
         ))}
       </div>

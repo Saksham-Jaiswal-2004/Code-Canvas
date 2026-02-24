@@ -1,4 +1,5 @@
 import AnimatedSection from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
 
 const events = [
   { date: "24 Feb", title: "Registrations Open", active: true },
@@ -21,31 +22,49 @@ const EventTimeline = () => (
       <AnimatedSection delay={0.1}>
         <div className="hidden md:flex items-start justify-between relative">
           <div className="absolute top-5 left-0 right-0 h-0.5 bg-border" />
-          <div
+          <motion.div
             className="absolute top-5 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary"
-            style={{ width: `${(events.filter(e => e.active).length / events.length) * 100}%` }}
+            initial={{ width: 0 }}
+            whileInView={{ width: `${(events.filter(e => e.active).length / events.length) * 100}%` }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
           {events.map((e, i) => (
-            <div key={i} className="relative flex flex-col items-center text-center w-1/5">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              whileHover={{ scale: 1.1 }}
+              className="relative flex flex-col items-center text-center w-1/5 cursor-default"
+            >
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-display font-bold z-10 ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-display font-bold z-10 transition-all duration-300 ${
                   e.active
                     ? "bg-primary text-primary-foreground neon-glow"
-                    : "bg-muted text-muted-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
               >
                 {i + 1}
               </div>
               <div className="mt-3 text-xs text-primary font-display font-semibold">{e.date}</div>
               <div className="mt-1 text-xs text-muted-foreground max-w-[120px]">{e.title}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Mobile vertical */}
         <div className="md:hidden space-y-4">
           {events.map((e, i) => (
-            <div key={i} className="flex items-center gap-4">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="flex items-center gap-4"
+            >
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-display font-bold shrink-0 ${
                   e.active
@@ -59,7 +78,7 @@ const EventTimeline = () => (
                 <div className="text-xs text-primary font-display font-semibold">{e.date}</div>
                 <div className="text-sm text-foreground">{e.title}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </AnimatedSection>

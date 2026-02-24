@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface TimeLeft {
   days: number;
@@ -37,14 +38,27 @@ const CountdownTimer = () => {
   return (
     <div className="flex gap-3 sm:gap-4">
       {units.map((u) => (
-        <div key={u.label} className="glass rounded-xl px-3 py-3 sm:px-5 sm:py-4 text-center neon-glow min-w-[70px]">
-          <div className="text-2xl sm:text-4xl font-display font-bold text-gradient-blue">
-            {String(u.value).padStart(2, "0")}
-          </div>
-          <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest mt-1">
+        <motion.div
+          key={u.label}
+          whileHover={{ scale: 1.08, boxShadow: "0 0 30px hsl(200 100% 50% / 0.4)" }}
+          className="glass rounded-xl px-3 py-3 sm:px-5 sm:py-4 text-center neon-glow min-w-[70px] cursor-default group"
+        >
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={u.value}
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 10, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-2xl sm:text-4xl font-display font-bold text-gradient-blue"
+            >
+              {String(u.value).padStart(2, "0")}
+            </motion.div>
+          </AnimatePresence>
+          <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest mt-1 group-hover:text-primary transition-colors">
             {u.label}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

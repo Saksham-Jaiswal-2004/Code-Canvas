@@ -1,6 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   { q: "Is v0.dev mandatory?", a: "Yes, participants must use v0.dev to generate at least part of their portfolio UI. Proof of usage is required." },
@@ -25,23 +26,36 @@ const FAQ = () => {
         <div className="space-y-3">
           {faqs.map((faq, i) => (
             <AnimatedSection key={i} delay={i * 0.05}>
-              <div className="glass rounded-xl overflow-hidden">
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                className="glass rounded-xl overflow-hidden"
+              >
                 <button
                   onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/20 transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/20 transition-colors group"
                 >
-                  <span className="text-sm font-medium text-foreground pr-4">{faq.q}</span>
+                  <span className="text-sm font-medium text-foreground pr-4 group-hover:text-primary transition-colors">{faq.q}</span>
                   <ChevronDown
                     size={18}
-                    className={`text-muted-foreground shrink-0 transition-transform duration-200 ${
-                      openIdx === i ? "rotate-180" : ""
+                    className={`text-muted-foreground shrink-0 transition-all duration-300 ${
+                      openIdx === i ? "rotate-180 text-primary" : ""
                     }`}
                   />
                 </button>
-                {openIdx === i && (
-                  <div className="px-5 pb-5 text-sm text-muted-foreground">{faq.a}</div>
-                )}
-              </div>
+                <AnimatePresence>
+                  {openIdx === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5 text-sm text-muted-foreground">{faq.a}</div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             </AnimatedSection>
           ))}
         </div>
