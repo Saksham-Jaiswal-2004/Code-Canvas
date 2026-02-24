@@ -10,7 +10,7 @@ const Footer = () => (
         <div>
           <h3 className="font-display font-bold text-foreground mb-3">Organized By</h3>
           <p className="text-sm text-muted-foreground mb-2">GDG on Campus</p>
-          <p className="text-xs text-muted-foreground">Indian Institue of Information Technology, Kalyani</p>
+          <p className="text-xs text-muted-foreground">Indian Institute of Information Technology, Kalyani</p>
         </div>
 
         {/* Contact */}
@@ -31,9 +31,9 @@ const Footer = () => (
           <h3 className="font-display font-bold text-foreground mb-3">Follow Us</h3>
           <div className="flex gap-3">
             {[
-              { icon: Linkedin, href: "#" },
-              { icon: Twitter, href: "#" },
-              { icon: Instagram, href: "#" },
+              { icon: Linkedin, href: "https://www.linkedin.com/company/gdg-iiit-kalyani/?viewAsMember=true" },
+              { icon: Twitter, href: "https://x.com/gdsciiitkalyani" },
+              { icon: Instagram, href: "https://www.instagram.com/gdgiiitkalyani/?next=%2F" },
             ].map(({ icon: Icon, href }, i) => (
               <motion.a
                 key={i}

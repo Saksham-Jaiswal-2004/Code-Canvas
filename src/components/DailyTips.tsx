@@ -54,7 +54,7 @@ const DailyTips = () => {
                 href={tip.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : ""} inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-colors group-hover:translate-x-1`}
+                className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : "text-primary hover:text-secondary"} inline-flex items-center gap-1.5 text-xs transition-colors group-hover:translate-x-1`}
               >
                 View Details <ExternalLink size={12} />
               </a>
@@ -80,7 +80,7 @@ const DailyTips = () => {
                   href={tip.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : ""}  inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-all group-hover:translate-x-1 duration-300`}
+                  className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : "text-primary hover:text-secondary"}  inline-flex items-center gap-1.5 text-xs transition-all group-hover:translate-x-1 duration-300`}
                 >
                   View Details <ExternalLink size={12} />
                 </a>
