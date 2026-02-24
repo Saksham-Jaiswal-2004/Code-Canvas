@@ -49,7 +49,7 @@ const Hero = () => {
       <motion.div style={{ y: y2 }} className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-float" />
       <motion.div style={{ y: y1 }} className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-float" />
 
-      <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-4 text-center py-32">
+      <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-4 text-center py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,10 +59,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 text-sm text-muted-foreground"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-2 text-sm text-muted-foreground"
           >
-            <CalendarClock size={16} className="text-primary animate-pulse-glow" />
-            <span>Portfolio Making Competition</span>
+            <img src="/GDG-LOGO Bg Transparent.png" alt="GDG Logo" className="w-72 h-auto" />
           </motion.div>
 
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-display font-bold tracking-tight mb-6">
@@ -120,12 +119,12 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="neon" size="lg" className="text-base px-8 group" asChild>
-              <a href="#register">
+              <a href="https://forms.gle/YzNrdNs2bu2HECzD7">
                 <span className="group-hover:scale-105 inline-block transition-transform">Register Now</span>
               </a>
             </Button>
             <Button variant="neon-outline" size="lg" className="text-base px-8 group" asChild>
-              <a href="#submit">
+              <a href="https://forms.gle/PWiKCK6vYxcdpbLi7">
                 <span className="group-hover:scale-105 inline-block transition-transform">Submit Project</span>
               </a>
             </Button>

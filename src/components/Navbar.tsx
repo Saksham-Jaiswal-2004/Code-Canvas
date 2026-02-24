@@ -59,7 +59,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#register"
+            href="https://forms.gle/YzNrdNs2bu2HECzD7"
             className="text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
           >
             Register
@@ -95,7 +95,7 @@ const Navbar = () => {
           </a>
         ))}
         <a
-          href="#register"
+          href="https://forms.gle/YzNrdNs2bu2HECzD7"
           onClick={() => setOpen(false)}
           className="block mt-2 mb-4 text-center text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30"
         >

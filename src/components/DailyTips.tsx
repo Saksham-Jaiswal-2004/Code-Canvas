@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const tips = [
-  { day: 1, topic: "Color Theory", desc: "Master palettes that make your portfolio pop.", link: "#" },
-  { day: 2, topic: "Typography", desc: "Choose fonts that reflect your personality.", link: "#" },
-  { day: 3, topic: "Responsiveness", desc: "Ensure pixel-perfect design on every device.", link: "#" },
-  { day: 4, topic: "Animations", desc: "Add subtle motion for a premium feel.", link: "#" },
-  { day: 5, topic: "Project Showcase", desc: "Present your work with impact and clarity.", link: "#" },
-  { day: 6, topic: "Performance", desc: "Optimize load times and core web vitals.", link: "#" },
-  { day: 7, topic: "SEO Basics", desc: "Make your portfolio discoverable.", link: "#" },
-  { day: 8, topic: "Code Quality", desc: "Write clean, maintainable code.", link: "#" },
-  { day: 9, topic: "Final Checklist", desc: "Review everything before submission.", link: "#" },
+  { day: 1, topic: "Color Theory", desc: "Master palettes that make your portfolio pop.", link: "" },
+  { day: 2, topic: "Typography", desc: "Choose fonts that reflect your personality.", link: "" },
+  { day: 3, topic: "Responsiveness", desc: "Ensure pixel-perfect design on every device.", link: "" },
+  { day: 4, topic: "Animations", desc: "Add subtle motion for a premium feel.", link: "" },
+  { day: 5, topic: "Project Showcase", desc: "Present your work with impact and clarity.", link: "" },
+  { day: 6, topic: "Performance", desc: "Optimize load times and core web vitals.", link: "" },
+  { day: 7, topic: "SEO Basics", desc: "Make your portfolio discoverable.", link: "" },
+  { day: 8, topic: "Code Quality", desc: "Write clean, maintainable code.", link: "" },
+  { day: 9, topic: "Final Checklist", desc: "Review everything before submission.", link: "" },
 ];
 
 const DailyTips = () => {
@@ -54,9 +54,9 @@ const DailyTips = () => {
                 href={tip.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-colors group-hover:translate-x-1"
+                className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : ""} inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-colors group-hover:translate-x-1`}
               >
-                View on LinkedIn <ExternalLink size={12} />
+                View Details <ExternalLink size={12} />
               </a>
             </motion.div>
           ))}
@@ -80,9 +80,9 @@ const DailyTips = () => {
                   href={tip.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-all group-hover:translate-x-1 duration-300"
+                  className={`${tip.link === "" ? "text-gray-700 hover:text-gray-700 cursor-not-allowed pointer-events-none" : ""}  inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary transition-all group-hover:translate-x-1 duration-300`}
                 >
-                  View on LinkedIn <ExternalLink size={12} />
+                  View Details <ExternalLink size={12} />
                 </a>
               </motion.div>
             </AnimatedSection>

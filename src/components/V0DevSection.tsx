@@ -12,7 +12,7 @@ const steps = [
 ];
 
 const creditFaqs = [
-  { q: "What if I already have credits?", a: "You can still use the provided credits. They stack with your existing balance." },
+  // { q: "What if I already have credits?", a: "You can still use the provided credits. They stack with your existing balance." },
   { q: "What if I face issues claiming credits?", a: "Contact the organizers via email or WhatsApp. Support is available during the build phase." },
 ];
 

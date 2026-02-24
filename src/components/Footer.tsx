@@ -2,25 +2,25 @@ import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => (
-  <footer className="border-t border-border/50 py-16 px-4 relative overflow-hidden">
+  <footer className="border-t border-border/50 pt-16 pb-8 px-4 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
     <div className="container mx-auto max-w-5xl relative">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
         {/* Organizer */}
         <div>
           <h3 className="font-display font-bold text-foreground mb-3">Organized By</h3>
-          <p className="text-sm text-muted-foreground mb-2">Code Canvas Team</p>
-          <p className="text-xs text-muted-foreground">Promoting modern web development and digital identity building.</p>
+          <p className="text-sm text-muted-foreground mb-2">GDG on Campus</p>
+          <p className="text-xs text-muted-foreground">Indian Institue of Information Technology, Kalyani</p>
         </div>
 
         {/* Contact */}
         <div>
           <h3 className="font-display font-bold text-foreground mb-3">Contact Us</h3>
           <div className="space-y-2">
-            <a href="mailto:hello@codecanvas.dev" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-300">
-              <Mail size={14} /> hello@codecanvas.dev
+            <a href="mailto:dsc.iiitkalyani@gmail.com" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-300">
+              <Mail size={14} /> dsc.iiitkalyani@gmail.com
             </a>
-            <a href="https://wa.me/919999999999" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-300">
+            <a href="https://wa.me/918420828031" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-300">
               <Phone size={14} /> WhatsApp Support
             </a>
           </div>
@@ -52,7 +52,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-border/50 pt-6 text-center">
-        <p className="text-xs text-muted-foreground">
+        <p className="text-sm text-muted-foreground">
           © 2026 Code Canvas. All rights reserved.
         </p>
       </div>
