@@ -67,7 +67,7 @@ const Prizes = () => (
                 <Trophy size={56} className="text-primary mx-auto mb-4" />
               </motion.div>
               <div className="text-xs uppercase tracking-widest text-primary mb-2 font-display font-bold">🏆 Winner</div>
-              <div className="text-4xl font-display font-bold text-foreground mb-1">₹1500</div>
+              <div className="text-4xl font-display font-bold text-foreground mb-1">₹XXXX</div>
               <p className="text-sm text-muted-foreground">Cash Prize</p>
               <div className="mt-4 flex justify-center gap-2">
                 <Gift size={14} className="text-primary/60 animate-pulse-glow" />
