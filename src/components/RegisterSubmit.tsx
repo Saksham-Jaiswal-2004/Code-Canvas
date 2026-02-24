@@ -22,7 +22,7 @@ const RegisterSubmit = () => (
             Deadline: <span className="text-primary font-semibold">5th March, 11:59 PM</span>
           </p>
 
-          <div className="mx-auto mb-8 w-fit rounded-xl border border-primary/20 bg-black/20 py-5 px-16 text-left">
+          <div className="mx-auto mb-8 w-fit rounded-xl border border-primary/20 bg-black/20 py-5 lg:px-16 md:px-8 sm:px-2 text-left">
             <p className="text-sm text-muted-foreground mb-3 font-medium">Submission requires:</p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-foreground">
