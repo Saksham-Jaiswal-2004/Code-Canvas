@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 const tips = [
   { day: 1, topic: "Color & Visual Identity", desc: "Use a consistent color palette and strong contrast to create a memorable first impression.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7432505226676539392" },
-  { day: 2, topic: "Typography", desc: "Choose clean, readable fonts with proper hierarchy for a professional look.", link: "" },
+  { day: 2, topic: "Typography", desc: "Choose clean, readable fonts with proper hierarchy for a professional look.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7432841267430109184" },
   { day: 3, topic: "Responsiveness", desc: "Ensure your portfolio looks flawless on mobile, tablet, and desktop screens.", link: "" },
   { day: 4, topic: "Animations & Micro-Interactions", desc: "Use subtle motion effects to enhance user experience without distraction.", link: "" },
   { day: 5, topic: "Project Showcase", desc: "Highlight real impact, tech stack, and live demos instead of just listing features.", link: "" },
