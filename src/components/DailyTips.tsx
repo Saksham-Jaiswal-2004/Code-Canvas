@@ -6,8 +6,8 @@ import { useRef } from "react";
 const tips = [
   { day: 1, topic: "Color & Visual Identity", desc: "Use a consistent color palette and strong contrast to create a memorable first impression.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7432505226676539392" },
   { day: 2, topic: "Typography", desc: "Choose clean, readable fonts with proper hierarchy for a professional look.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7432841267430109184" },
-  { day: 3, topic: "Responsiveness", desc: "Ensure your portfolio looks flawless on mobile, tablet, and desktop screens.", link: "" },
-  { day: 4, topic: "Animations & Micro-Interactions", desc: "Use subtle motion effects to enhance user experience without distraction.", link: "" },
+  { day: 3, topic: "Responsiveness", desc: "Ensure your portfolio looks flawless on mobile, tablet, and desktop screens.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7433488537598992384" },
+  { day: 4, topic: "Animations & Micro-Interactions", desc: "Use subtle motion effects to enhance user experience without distraction.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7433578021187465216" },
   { day: 5, topic: "Project Showcase", desc: "Highlight real impact, tech stack, and live demos instead of just listing features.", link: "" },
   { day: 6, topic: "Performance Optimization", desc: "Optimize images and code to improve loading speed and overall performance.", link: "" },
   { day: 7, topic: "SEO Basics", desc: "Add proper meta tags and headings to make your portfolio discoverable.", link: "" },
