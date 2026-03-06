@@ -11,8 +11,8 @@ const tips = [
   { day: 5, topic: "Project Showcase", desc: "Highlight real impact, tech stack, and live demos instead of just listing features.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7433901895582244864" },
   { day: 6, topic: "Performance Optimization", desc: "Optimize images and code to improve loading speed and overall performance.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7434320351683305472" },
   { day: 7, topic: "SEO Basics", desc: "Add proper meta tags and headings to make your portfolio discoverable.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7434669081934565376" },
-  { day: 8, topic: "Personal Branding", desc: "Clearly communicate who you are, your strengths, and what makes you unique.", link: "" },
-  { day: 9, topic: "Strong Call-to-Action", desc: "Include clear buttons like Hire Me or View Resume to guide visitors effectively.", link: "" },
+  { day: 8, topic: "Personal Branding", desc: "Clearly communicate who you are, your strengths, and what makes you unique.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7435038781411377152" },
+  { day: 9, topic: "Strong Call-to-Action", desc: "Include clear buttons like Hire Me or View Resume to guide visitors effectively.", link: "https://www.linkedin.com/feed/update/urn:li:activity:7435597698273251329" },
 ];
 
 const DailyTips = () => {
